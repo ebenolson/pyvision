@@ -45,7 +45,7 @@ cpdef hog(im, int sbin = 8):
     cdef int x, y, o, q
     cdef int dstptr, srcptr
 
-    width, height = im.size
+    width, height = im.shape[:2]
     blocks0 = height / sbin 
     blocks1 = width / sbin
 
