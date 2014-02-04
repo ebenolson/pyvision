@@ -14,7 +14,8 @@ cpdef hog_gray(im, int sbin = 8):
     Accepts an NxN numpy array
     Adopted from Pedro Felzenszwalb's features.cc
     """
-    cdef np.ndarray[np.double_t, ndim=3] data, feat
+    cdef np.ndarray[np.double_t, ndim=2] data
+    cdef np.ndarray[np.double_t, ndim=3] feat
     cdef np.ndarray[np.double_t, ndim=1] hist, norm
 
     cdef int blocks0, blocks1
